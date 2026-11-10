@@ -1,0 +1,19 @@
+{
+  "name": "mini-mern-ecommerce",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:client": "npm run dev --workspace client",
+    "dev:server": "npm run dev --workspace server",
+    "start:server": "npm run start --workspace server",
+    "build": "npm run build --workspace client",
+    "lint": "npm run lint --workspace client",
+    "test": "node --test server/test/app.test.js client/test/cart.test.js",
+    "test:integration": "node server/test/integration.js",
+    "seed:admin": "npm run seed:admin --workspace server",
+    "seed:products": "npm run seed:products --workspace server"
+  }
+}
